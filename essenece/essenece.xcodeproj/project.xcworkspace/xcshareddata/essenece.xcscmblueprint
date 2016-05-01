@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4270EBB272FCF3D3D527D5C345478F2644A83FFB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "34D40A6710C243A1BB0926765CD9E577AC039CA6" : 0,
+    "4270EBB272FCF3D3D527D5C345478F2644A83FFB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "936C78DE-2F52-4344-B818-017D15EEBBF8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "34D40A6710C243A1BB0926765CD9E577AC039CA6" : "",
+    "4270EBB272FCF3D3D527D5C345478F2644A83FFB" : "IOSProjects\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "essenece",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "essenece\/essenece.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Progr3ss\/LearningMachineLearning",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34D40A6710C243A1BB0926765CD9E577AC039CA6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Progr3ss\/IOSProjects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4270EBB272FCF3D3D527D5C345478F2644A83FFB"
+    }
+  ]
+}
