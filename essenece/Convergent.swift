@@ -16,6 +16,7 @@ class Convergent: UIViewController {
 	
 	var toDoItems = [ToDoItems]()
 	var mColorArray: NSMutableArray =  []
+	var userQuestion: String!
 	
 	
     override func viewDidLoad() {
@@ -68,6 +69,7 @@ extension Convergent {
 		
 			if let reflection = segue.destinationViewController as? Reflection {
 				reflection.self.toDoItems = self.toDoItems
+				reflection.userQuestion = userQuestion
 				
 				
 				

@@ -27,8 +27,11 @@ class ConfigureCellForEntry: UITableViewCell {
 	func configureCellForEntry(entry:EntityReflection) {
 		
 		// Day of the week, month, year format
+//		let formatter = NSDateFormatter()
+//		formatter.dateFormat = " MMMM dd, yyyy"
 		let formatter = NSDateFormatter()
-		formatter.dateFormat = "MMMM dd yyyy"
+		formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+		formatter.dateFormat = "MMMM dd, yyyy"
 		
 		// Create the new date object
 		let date = NSDate(timeIntervalSince1970: entry.date)

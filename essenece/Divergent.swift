@@ -13,9 +13,11 @@ class Divergent: UIViewController {
 
 
 	
+	@IBOutlet weak var ideaCounter: UILabel!
 	@IBOutlet weak var timeCounter: UILabel!
 	var timer = NSTimer()
-	var counter = 10
+	var counter = 0
+//	var  = 0
 	
 	@IBOutlet weak var userQuestionQ: UILabel!
 	@IBOutlet weak var userIdeas: UITextField!
@@ -26,6 +28,7 @@ class Divergent: UIViewController {
 	var mListIdeas :NSMutableArray = []
 	var mColorArray : NSMutableArray = []
 	var userQuestionFromQ = ""
+	
 	
 	
     override func viewDidLoad() {
@@ -56,6 +59,8 @@ extension Divergent:UITableViewDataSource {
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		
+		ideaCounter.text = "\(toDoItems.count)"
 		return toDoItems.count
 	}
 	
@@ -106,6 +111,7 @@ extension Divergent {
 			
 			convergentView.self.toDoItems = self.toDoItems
 			convergentView.mColorArray = mColorArray
+			convergentView.userQuestion = userQuestionQ.text
 			
 //			print("In transfer = {\(self.toDoItems) and color \(mColorArray)}")
 		}
@@ -114,12 +120,14 @@ extension Divergent {
 	
 	func timerCounting(){
 		timer.invalidate()
-//		timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(Divergent.timeAction), userInfo: nil, repeats: true)		        
-     timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timeAction", userInfo: nil, repeats: true)
+//		timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(Divergent.timeAction), userInfo: nil, repeats: true)
+     timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(Divergent.timeAction), userInfo: nil, repeats: true)
 	}
 	
 	func timeAction(){
 		counter -= 1
+//		timeCounter.text = "\(counter)"
+//		print("counting \(counter)")
 		timeCounter.text = "\(counter)"
 		
 		if counter == 0 {

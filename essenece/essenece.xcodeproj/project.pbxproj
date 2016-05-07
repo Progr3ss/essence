@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		9110F5F11CBE273500D80D82 /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110F5F01CBE273500D80D82 /* TimelineCell.swift */; };
 		911173861CBD760B009DA656 /* ConfigureCellForEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911173851CBD760B009DA656 /* ConfigureCellForEntry.swift */; };
+		9133A1751CD716AB00913F69 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133A1741CD716AB00913F69 /* Timer.swift */; };
 		915418C81CB5BD0500CB64F8 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915418C71CB5BD0500CB64F8 /* Quotes.swift */; };
 		915418CA1CB5C1E400CB64F8 /* QuotesPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915418C91CB5C1E400CB64F8 /* QuotesPrompt.swift */; };
 		915418CC1CB5CB7500CB64F8 /* Divergent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915418CB1CB5CB7500CB64F8 /* Divergent.swift */; };
-		915FAFD11CBB6BB40035AC53 /* EntityReflection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915FAFCF1CBB6BB40035AC53 /* EntityReflection+CoreDataProperties.swift */; };
-		915FAFD21CBB6BB40035AC53 /* EntityReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915FAFD01CBB6BB40035AC53 /* EntityReflection.swift */; };
 		9180DADC1CB9DA3300F094FF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180DADB1CB9DA3300F094FF /* Colors.swift */; };
 		9180DADE1CB9DAA100F094FF /* ToDoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180DADD1CB9DAA100F094FF /* ToDoItems.swift */; };
 		9180DAE01CB9DBAF00F094FF /* DivergentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180DADF1CB9DBAF00F094FF /* DivergentCell.swift */; };
@@ -21,6 +20,8 @@
 		9180DAE81CB9F5EA00F094FF /* Convergent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180DAE71CB9F5EA00F094FF /* Convergent.swift */; };
 		9180DAEC1CBA136E00F094FF /* Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180DAEB1CBA136E00F094FF /* Reflection.swift */; };
 		9180DAEE1CBA39FF00F094FF /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180DAED1CBA39FF00F094FF /* Timeline.swift */; };
+		919CD9511CDD85C0006E20B7 /* EntityReflection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CD94F1CDD85C0006E20B7 /* EntityReflection+CoreDataProperties.swift */; };
+		919CD9521CDD85C0006E20B7 /* EntityReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CD9501CDD85C0006E20B7 /* EntityReflection.swift */; };
 		91E189431CB3984E00174C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E189421CB3984E00174C3A /* AppDelegate.swift */; };
 		91E189481CB3984E00174C3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E189461CB3984E00174C3A /* Main.storyboard */; };
 		91E1894B1CB3984E00174C3A /* essenece.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91E189491CB3984E00174C3A /* essenece.xcdatamodeld */; };
@@ -32,11 +33,10 @@
 /* Begin PBXFileReference section */
 		9110F5F01CBE273500D80D82 /* TimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		911173851CBD760B009DA656 /* ConfigureCellForEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureCellForEntry.swift; sourceTree = "<group>"; };
+		9133A1741CD716AB00913F69 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		915418C71CB5BD0500CB64F8 /* Quotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		915418C91CB5C1E400CB64F8 /* QuotesPrompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesPrompt.swift; sourceTree = "<group>"; };
 		915418CB1CB5CB7500CB64F8 /* Divergent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divergent.swift; sourceTree = "<group>"; };
-		915FAFCF1CBB6BB40035AC53 /* EntityReflection+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EntityReflection+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		915FAFD01CBB6BB40035AC53 /* EntityReflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityReflection.swift; sourceTree = "<group>"; };
 		9180DADB1CB9DA3300F094FF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9180DADD1CB9DAA100F094FF /* ToDoItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItems.swift; sourceTree = "<group>"; };
 		9180DADF1CB9DBAF00F094FF /* DivergentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivergentCell.swift; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		9180DAE71CB9F5EA00F094FF /* Convergent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convergent.swift; sourceTree = "<group>"; };
 		9180DAEB1CBA136E00F094FF /* Reflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reflection.swift; sourceTree = "<group>"; };
 		9180DAED1CBA39FF00F094FF /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		919CD94F1CDD85C0006E20B7 /* EntityReflection+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EntityReflection+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		919CD9501CDD85C0006E20B7 /* EntityReflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityReflection.swift; sourceTree = "<group>"; };
 		91E1893F1CB3984D00174C3A /* essenece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = essenece.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E189421CB3984E00174C3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E189471CB3984E00174C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,10 +97,11 @@
 		91E189361CB3984D00174C3A = {
 			isa = PBXGroup;
 			children = (
+				919CD94F1CDD85C0006E20B7 /* EntityReflection+CoreDataProperties.swift */,
+				919CD9501CDD85C0006E20B7 /* EntityReflection.swift */,
+				9133A1741CD716AB00913F69 /* Timer.swift */,
 				9110F5F01CBE273500D80D82 /* TimelineCell.swift */,
 				911173851CBD760B009DA656 /* ConfigureCellForEntry.swift */,
-				915FAFCF1CBB6BB40035AC53 /* EntityReflection+CoreDataProperties.swift */,
-				915FAFD01CBB6BB40035AC53 /* EntityReflection.swift */,
 				9180DAED1CBA39FF00F094FF /* Timeline.swift */,
 				9180DAE71CB9F5EA00F094FF /* Convergent.swift */,
 				9180DAEB1CBA136E00F094FF /* Reflection.swift */,
@@ -211,16 +214,17 @@
 				9180DAE61CB9E15900F094FF /* IdeaCell.swift in Sources */,
 				9180DADE1CB9DAA100F094FF /* ToDoItems.swift in Sources */,
 				915418CC1CB5CB7500CB64F8 /* Divergent.swift in Sources */,
+				9133A1751CD716AB00913F69 /* Timer.swift in Sources */,
 				9180DAE01CB9DBAF00F094FF /* DivergentCell.swift in Sources */,
-				915FAFD21CBB6BB40035AC53 /* EntityReflection.swift in Sources */,
 				9180DADC1CB9DA3300F094FF /* Colors.swift in Sources */,
 				915418C81CB5BD0500CB64F8 /* Quotes.swift in Sources */,
 				91E1894B1CB3984E00174C3A /* essenece.xcdatamodeld in Sources */,
 				9180DAEE1CBA39FF00F094FF /* Timeline.swift in Sources */,
+				919CD9521CDD85C0006E20B7 /* EntityReflection.swift in Sources */,
 				9110F5F11CBE273500D80D82 /* TimelineCell.swift in Sources */,
 				9180DAE81CB9F5EA00F094FF /* Convergent.swift in Sources */,
 				91E189741CB3986E00174C3A /* CoreDataStack.swift in Sources */,
-				915FAFD11CBB6BB40035AC53 /* EntityReflection+CoreDataProperties.swift in Sources */,
+				919CD9511CDD85C0006E20B7 /* EntityReflection+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

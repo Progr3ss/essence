@@ -18,6 +18,8 @@ class TimelineCell: UITableViewCell {
 	
 	@IBOutlet weak var dateTime: UILabel!
 	@IBOutlet weak var bodyText: UILabel!
+	@IBOutlet weak var question: UILabel!
+	@IBOutlet weak var idea: UILabel!
 	
 	@IBOutlet weak var location: UILabel!
     override func awakeFromNib() {
@@ -68,29 +70,40 @@ class TimelineCell: UITableViewCell {
 //	}
 	
 	func configureCellForEntry(entry:EntityReflection) {
+		
+		// Day of the week, month, year format
+//		let formatter = NSDateFormatter()
+//		formatter.dateFormat = "MMMM dd yyyy"
+//		
+//		// Create the new date object
+//		let date = NSDate(timeIntervalSince1970: entry.date)
 		// Create the new date object
-		let currentDate = NSDate()
-		let dateFormatter = NSDateFormatter()
-		
-		dateFormatter.locale = NSLocale.currentLocale()
-		var convertedDate = dateFormatter.stringFromDate(currentDate)
-		
-		
-		dateFormatter.dateFormat = " MMMM dd, yyyy"
-		convertedDate = dateFormatter.stringFromDate(currentDate)
-		print("Current date \(convertedDate)")
+//		let currentDate = NSDate()
+//		let dateFormatter = NSDateFormatter()
+//		
+//		dateFormatter.locale = NSLocale.currentLocale()
+//		var convertedDate = dateFormatter.stringFromDate(currentDate)
+//		
+//		
+//		dateFormatter.dateFormat = " MMMM dd yyyy"
+//		convertedDate = dateFormatter.stringFromDate(currentDate)
+//		print("Current date \(convertedDate)")
 
 		
 //		// Create the new date object
 //		let date = NSDate(timeIntervalSince1970: entry.date)
 		
-		self.dateTime.text = convertedDate
+//		self.dateTime.text = convertedDate
 		
 		
 //		self.bodyText.text = " this is the body"
 		
-		self.location.text = "This is a location"
+//		self.location.text = "This is a location"
 		self.bodyText.text = entry.body
+		self.question.text = entry.question
+		self.idea.text = entry.idea
+//		let date =
+//		self.dateTime.text = formatter.stringFromDate(date)
 		print("body \(entry.body)")
 //		self.dateTime.text = formatter.stringFromDate(date)
 		

@@ -26,7 +26,7 @@ class Timeline: UIViewController {
 		
 	
 		tableView.estimatedRowHeight = 136
-//		tableView.rowHeight = UIITableViewAutomaticDimension
+		tableView.rowHeight = UITableViewAutomaticDimension
 //		table
 		fetchResultController ()
 		fetchedResultsController.delegate = self
@@ -64,7 +64,7 @@ extension Timeline: NSFetchedResultsControllerDelegate {
 	func entryListFetchequest() -> NSFetchRequest {
 		let fetchRequest = NSFetchRequest(entityName: "EntityReflection")
 		let date =
-			NSSortDescriptor(key: "date", ascending: false)
+			NSSortDescriptor(key: "date", ascending:false)
 		fetchRequest.sortDescriptors = [date]
 		return fetchRequest
 	}
@@ -80,6 +80,7 @@ extension Timeline: NSFetchedResultsControllerDelegate {
 		
 		fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: dataStack.managedObjectContext, sectionNameKeyPath: "sectionName", cacheName: nil)
 		
+			fetchedResultsController?.delegate = self
 		
 		return fetchedResultsController
 	}
@@ -168,9 +169,14 @@ extension Timeline: UITableViewDataSource, UITableViewDelegate{
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// #warning Incomplete implementation, return the number of rows
 		
-		let sectionInfo =  fetchedResultsController.sections![section]
+//		let sectionInfo =  fetchedResultsController.sections![section]
+//		
+//		return sectionInfo.numberOfObjects
 		
-		return sectionInfo.numberOfObjects
+		
+		let rows: NSFetchedResultsSectionInfo = self.fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
+		
+		return rows.numberOfObjects
 		
 	}
 	
@@ -198,12 +204,12 @@ extension Timeline: UITableViewDataSource, UITableViewDelegate{
 //	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 //		
 //		return tableView.rowHeight
-////		
-////		let entry = self.fetchResultController().objectAtIndexPath(indexPath) as? EntityReflection
-////		
-////		let height = entryCell.getHeightForEntry(entry!)
-////		
-////		return height
+//		
+//		let entry = self.fetchResultController().objectAtIndexPath(indexPath) as? EntityReflection
+//		
+//		let height = entryCell.getHeightForEntry(entry!)
+//		
+//		return height
 //	}
 
 }

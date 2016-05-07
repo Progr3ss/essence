@@ -2,7 +2,7 @@
 //  EntityReflection+CoreDataProperties.swift
 //  essenece
 //
-//  Created by martin chibwe on 4/10/16.
+//  Created by martin chibwe on 5/6/16.
 //  Copyright © 2016 martin chibwe. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,18 +15,34 @@ import CoreData
 extension EntityReflection {
 
     @NSManaged var body: String?
-    @NSManaged var idea: String?
-    @NSManaged var location: String?
     @NSManaged var date: NSTimeInterval
+    @NSManaged var idea: String?
     @NSManaged var imagedata: NSData?
+    @NSManaged var location: String?
+    @NSManaged var question: String?
 	
 	func sectionName() -> String {
-		//        let date = NSDate().dateByAddingTimeInterval(self.date)Ø
-		let date = NSDate(timeIntervalSinceReferenceDate: 123)
+		let date = NSDate(timeIntervalSince1970: self.date)
 		let f = NSDateFormatter()
-		f.dateFormat = "MMM yyyy"
+		f.dateFormat = "MMMM yyy"
 		
 		return f.stringFromDate(date)
 	}
 
+	
+//	func sectionName() -> String {
+////		let currentDate = NSDate()
+////		let dateFormatter = NSDateFormatter()
+////		
+////		dateFormatter.locale = NSLocale.currentLocale()
+////		var convertedDate = dateFormatter.stringFromDate(currentDate)
+////		
+////		
+//////		dateFormatter.dateFormat = "MMMM, yyyy"
+////		convertedDate = dateFormatter.stringFromDate(currentDate)
+////		
+////		
+////		return convertedDate
+//		
+//	}
 }

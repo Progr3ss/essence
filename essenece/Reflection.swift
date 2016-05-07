@@ -15,13 +15,13 @@ class Reflection: UIViewController {
 	@IBOutlet weak var bodyReflection: UITextField!
 	@IBOutlet weak var userIdeaReflection: UILabel!
 	@IBOutlet weak var reflectionView: UITextView!
-	
 	@IBOutlet weak var dateLabel: UILabel!
-	
 	@IBOutlet weak var question: UILabel!
+	@IBOutlet weak var addImage: UIButton!
 	
 	var reflection : EntityReflection!
 	var entry: EntityReflection!
+	var userQuestion:String!
 	let dataStack = CoreDataStack.sharedInstance
 	
 	var toDoItems = [ToDoItems]()
@@ -29,6 +29,7 @@ class Reflection: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+		question.text = userQuestion
 		date()
 	
 //		let currentDate = NSDate()
@@ -89,6 +90,20 @@ class Reflection: UIViewController {
 extension Reflection {
 	
 	func date() {
+		// Day of the week, month, year format
+//		let formatter = NSDateFormatter()
+//		formatter.dateFormat = "MMMM dd yyyy"
+//		
+//		// Create the new date object
+//		let date = NSDate(timeIntervalSince1970: entry.date)
+//		// Day of the week, month, year format
+////		let formatter = NSDateFormatter()
+////		formatter.dateFormat = "MMMM dd, yyyy"
+////		
+////		// Create the new date object
+////		let date = NSDate(timeIntervalSince1970: entry.date)
+//		self.dateLabel.text = formatter.stringFromDate(date)
+
 		
 		let currentDate = NSDate()
 		let dateFormatter = NSDateFormatter()
@@ -127,6 +142,8 @@ extension Reflection {
 		
 		entry.body = self.reflectionView.text
 		entry.idea = self.userIdeaReflection.text
+		entry.question = self.question.text
+		entry.date = NSDate().timeIntervalSince1970
 		
 		dataStack.saveContext()
 		
@@ -144,7 +161,6 @@ extension Reflection {
 		
 		dataStack.saveContext()
 	}
-	
 
 	
 	@IBAction func doneWasPressed(sender: AnyObject) {
