@@ -30,7 +30,13 @@ class Reflection: UIViewController {
         
         super.viewDidLoad()
 		question.text = userQuestion
+		
+//		userIdeaReflection.text = toDoItems[0].text
+//		userIdeaReflection.text =
+		
 		date()
+		print("Idea \(question) and \(userIdeaReflection)")
+		reflectionView.becomeFirstResponder()
 	
 //		let currentDate = NSDate()
 //		let dateFormatter = NSDateFormatter()
@@ -68,8 +74,10 @@ class Reflection: UIViewController {
 		
         if (toDoItems.count > 0) {
             
-            print(toDoItems[0].text)
+//            print(toDoItems[0].text)
             userIdeaReflection.text = toDoItems[0].text
+			
+			
         }
 
 		if self.entry != nil{

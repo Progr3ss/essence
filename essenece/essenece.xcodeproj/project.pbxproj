@@ -20,6 +20,9 @@
 		9180DAE81CB9F5EA00F094FF /* Convergent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180DAE71CB9F5EA00F094FF /* Convergent.swift */; };
 		9180DAEC1CBA136E00F094FF /* Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180DAEB1CBA136E00F094FF /* Reflection.swift */; };
 		9180DAEE1CBA39FF00F094FF /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180DAED1CBA39FF00F094FF /* Timeline.swift */; };
+		919BE3061CE06ED900A4371A /* MaterailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BE3041CE06ED900A4371A /* MaterailView.swift */; };
+		919BE3071CE06ED900A4371A /* MateralTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BE3051CE06ED900A4371A /* MateralTextField.swift */; };
+		919BE3091CE06F5F00A4371A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BE3081CE06F5E00A4371A /* Constants.swift */; };
 		919CD9511CDD85C0006E20B7 /* EntityReflection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CD94F1CDD85C0006E20B7 /* EntityReflection+CoreDataProperties.swift */; };
 		919CD9521CDD85C0006E20B7 /* EntityReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CD9501CDD85C0006E20B7 /* EntityReflection.swift */; };
 		91E189431CB3984E00174C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E189421CB3984E00174C3A /* AppDelegate.swift */; };
@@ -44,6 +47,9 @@
 		9180DAE71CB9F5EA00F094FF /* Convergent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convergent.swift; sourceTree = "<group>"; };
 		9180DAEB1CBA136E00F094FF /* Reflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reflection.swift; sourceTree = "<group>"; };
 		9180DAED1CBA39FF00F094FF /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		919BE3041CE06ED900A4371A /* MaterailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterailView.swift; sourceTree = "<group>"; };
+		919BE3051CE06ED900A4371A /* MateralTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MateralTextField.swift; sourceTree = "<group>"; };
+		919BE3081CE06F5E00A4371A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		919CD94F1CDD85C0006E20B7 /* EntityReflection+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EntityReflection+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		919CD9501CDD85C0006E20B7 /* EntityReflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityReflection.swift; sourceTree = "<group>"; };
 		91E1893F1CB3984D00174C3A /* essenece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = essenece.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +103,9 @@
 		91E189361CB3984D00174C3A = {
 			isa = PBXGroup;
 			children = (
+				919BE3081CE06F5E00A4371A /* Constants.swift */,
+				919BE3041CE06ED900A4371A /* MaterailView.swift */,
+				919BE3051CE06ED900A4371A /* MateralTextField.swift */,
 				919CD94F1CDD85C0006E20B7 /* EntityReflection+CoreDataProperties.swift */,
 				919CD9501CDD85C0006E20B7 /* EntityReflection.swift */,
 				9133A1741CD716AB00913F69 /* Timer.swift */,
@@ -218,12 +227,15 @@
 				9180DAE01CB9DBAF00F094FF /* DivergentCell.swift in Sources */,
 				9180DADC1CB9DA3300F094FF /* Colors.swift in Sources */,
 				915418C81CB5BD0500CB64F8 /* Quotes.swift in Sources */,
+				919BE3091CE06F5F00A4371A /* Constants.swift in Sources */,
 				91E1894B1CB3984E00174C3A /* essenece.xcdatamodeld in Sources */,
 				9180DAEE1CBA39FF00F094FF /* Timeline.swift in Sources */,
 				919CD9521CDD85C0006E20B7 /* EntityReflection.swift in Sources */,
 				9110F5F11CBE273500D80D82 /* TimelineCell.swift in Sources */,
 				9180DAE81CB9F5EA00F094FF /* Convergent.swift in Sources */,
+				919BE3071CE06ED900A4371A /* MateralTextField.swift in Sources */,
 				91E189741CB3986E00174C3A /* CoreDataStack.swift in Sources */,
+				919BE3061CE06ED900A4371A /* MaterailView.swift in Sources */,
 				919CD9511CDD85C0006E20B7 /* EntityReflection+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

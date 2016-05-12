@@ -38,6 +38,16 @@ extension Convergent: UITableViewDataSource {
 		return toDoItems.count
 	}
 	
+	func imageWithImage(image:UIImage,scaledToSize newSize:CGSize)->UIImage{
+		
+		UIGraphicsBeginImageContext( newSize )
+		image.drawInRect(CGRect(x: 0,y: 0,width: newSize.width,height: newSize.height))
+		let newImage = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+		return newImage.imageWithRenderingMode(.AlwaysTemplate)
+	}
+
+	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		
 		let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! DivergentCell
@@ -45,9 +55,18 @@ extension Convergent: UITableViewDataSource {
 		let item = toDoItems[indexPath.row]
 		cell.textLabel?.text = item.text
 		cell.textLabel?.numberOfLines = 0
+//		
+//		cell.imageView?.image = UIImage(named: "light-bulb")
+//		cell.imageView?.contentMode = .ScaleAspectFit
+		
 		
 		cell.backgroundColor = mColorArray[indexPath.row] as? UIColor
-		
+		cell.imageView?.image = imageWithImage(UIImage(named: "light-bulb")!, scaledToSize: CGSize(width: 30, height: 30))
+//		var cellImg : UIImageView = UIImageView(frame: CGRectMake(5, 5, 30, 30))
+//		cellImg.image = UIImage(named: "light-bulb")
+//		cell.addSubview(cellImg)
+		cell.imageView?.contentMode = .ScaleAspectFit
+	
 		cell.delegate = self
 		cell.toDoItem = item
 		return cell

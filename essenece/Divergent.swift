@@ -17,7 +17,6 @@ class Divergent: UIViewController {
 	@IBOutlet weak var timeCounter: UILabel!
 	var timer = NSTimer()
 	var counter = 0
-//	var  = 0
 	
 	@IBOutlet weak var userQuestionQ: UILabel!
 	@IBOutlet weak var userIdeas: UITextField!
@@ -37,6 +36,10 @@ class Divergent: UIViewController {
 		userIdeas.delegate = self
 		userQuestionQ.text = userQuestionFromQ
 		
+		timeCounter.text = "\(counter)"
+		
+		
+		userIdeas.becomeFirstResponder()
 
     }
 	
@@ -98,7 +101,7 @@ extension Divergent:UITextFieldDelegate{
 			self.tableView.reloadData()
 		}
 		timerCounting()
-		return true
+		return false 
 	}
 }
 //MARK:FUNCTIONS

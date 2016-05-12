@@ -15,18 +15,45 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var timerPicker: UIPickerView!
 	@IBOutlet weak var userQuestion: UITextField!
 	@IBOutlet weak var quotesTextField: UITextView!
+	@IBOutlet weak var randomQuotes: UILabel!
 	
+	@IBOutlet weak var howHowtimeLabel: UILabel!
+	@IBOutlet weak var textViewQuotes: UITextView!
 	var timer = 5
+	
+	@IBOutlet weak var vTfTopConstraints: NSLayoutConstraint!
+	
+	//MARK: View Cycle
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		timerPicker.delegate = self
 		timerPicker.dataSource = self
-		
-		quotesTextField.text = questions[0]
-		self.userQuestion.delegate = self
-		
+		let randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
 
+		textViewQuotes.text = questions[randomIndex]
+		userQuestion.hidden = true
+		
+		self.userQuestion.delegate = self
+		self.textViewQuotes.backgroundColor = UIColor.clearColor()
+		self.textViewQuotes.textAlignment = NSTextAlignment.Center
+		self.textViewQuotes.selectable = false
+		
+		
+//		self.textViewQuotes.hidden = true
+//		self.howHowtimeLabel.hidden = true
+		
     }
+	
+	override func viewWillAppear(animated: Bool) {
+		
+		UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: { 
+			self.textViewQuotes.hidden = false
+			self.howHowtimeLabel.hidden = false
+			
+			}, completion: nil)
+	}
+	
 	
 //	navigation
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -47,10 +74,38 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 		
 	}
 	
+	//MARK: TextView Delegate
 	
+	func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+		
+		return true
+	}
+	
+	func textViewDidBeginEditing(textView: UITextView) {
+		
+		//self.view.frame = CGRectMake (self.view.frame.origin.x, -250, self.view.frame.size.width, self.view.frame.size.height)
+	}
+	
+	//MARK: Textfield Delegates
+	
+	func textFieldShouldBeginEditing(textField: UITextField) -> Bool  {
+		
+		return true
+	}
+	
+	func textFieldDidBeginEditing(textField: UITextField)  {
+		
+		
+		self.vTfTopConstraints.constant = CGFloat (-150.0)
+		
+		timerPicker.hidden = true
+		howHowtimeLabel.hidden = true
+		
+	}
 	
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
 		
+		self.setupViewFrameLayout()
 		textField.resignFirstResponder()
 		
 		if (!textField.text!.isEmpty) {
@@ -59,15 +114,18 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 			textField.textColor = UIColor.whiteColor()
 			
 			performSegueWithIdentifier("showDivergent", sender: self)
-			
-			
 		}
-		
 		
 		return true
 	}
 	
+	//MARK: Void Methods
 	
+	func setupViewFrameLayout() {
+		
+		self.vTfTopConstraints.constant = CGFloat (24.0)
+		self.view.frame = CGRectMake (self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height)
+	}
 
 }
 
@@ -101,7 +159,7 @@ extension QuotesPrompt : UIPickerViewDelegate , UIPickerViewDataSource{
 		if row == 0 {
 			//change to 60 
 			
-			timer = 60
+			timer = 10
 			
 		}
 		else if (row == 1){
@@ -140,11 +198,16 @@ extension QuotesPrompt : UIPickerViewDelegate , UIPickerViewDataSource{
 			
 		}
 		
+
+		UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
+			
+				self.userQuestion.hidden = false
+			}, completion: nil)
 		
-		print("Timer is \(timer)")
-		
+	
 		
 	}
+	
 	
 	
 	

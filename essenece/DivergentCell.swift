@@ -18,7 +18,7 @@ protocol TableViewCellDelegate {
 class DivergentCell: UITableViewCell {
 	
 	
-	@IBOutlet weak var listlabel: UILabel!
+//	@IBOutlet weak var listlabel: UILabel!
 	
 	var originalCenter = CGPoint()
 	var deleteOnDragRelease = false
@@ -27,10 +27,10 @@ class DivergentCell: UITableViewCell {
 	// The item that this cell renders.
 	var toDoItem: ToDoItems?
 	
-	override func prepareForReuse() {
-		super.prepareForReuse()
-		self.listlabel.text = nil
-	}
+//	override func prepareForReuse() {
+//		super.prepareForReuse()
+//		self.listlabel.text = nil
+//	}
 	
 	required init(coder aDecoder: NSCoder) {
 		fatalError("NSCoding not supported")
