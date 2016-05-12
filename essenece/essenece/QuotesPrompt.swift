@@ -96,7 +96,7 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 	func textFieldDidBeginEditing(textField: UITextField)  {
 		
 		
-		self.vTfTopConstraints.constant = CGFloat (-150.0)
+//		self.vTfTopConstraints.constant = CGFloat (-150.0)
 		
 		timerPicker.hidden = true
 		howHowtimeLabel.hidden = true
@@ -123,7 +123,7 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 	
 	func setupViewFrameLayout() {
 		
-		self.vTfTopConstraints.constant = CGFloat (24.0)
+//		self.vTfTopConstraints.constant = CGFloat (24.0)
 		self.view.frame = CGRectMake (self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height)
 	}
 

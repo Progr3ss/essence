@@ -25,8 +25,8 @@ class Timeline: UIViewController {
         super.viewDidLoad()
 		
 	
-		tableView.estimatedRowHeight = 136
-		tableView.rowHeight = UITableViewAutomaticDimension
+//		tableView.estimatedRowHeight = 174
+//		tableView.rowHeight = UITableViewAutomaticDimension
 //		table
 		fetchResultController ()
 		fetchedResultsController.delegate = self
@@ -201,16 +201,16 @@ extension Timeline: UITableViewDataSource, UITableViewDelegate{
         self.presentViewController(objVC, animated: true, completion: nil);
     }
 	
-//	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//		
-//		return tableView.rowHeight
-//		
-//		let entry = self.fetchResultController().objectAtIndexPath(indexPath) as? EntityReflection
-//		
-//		let height = entryCell.getHeightForEntry(entry!)
-//		
-//		return height
-//	}
+	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+		
+		return tableView.rowHeight
+		
+		let entry = self.fetchResultController().objectAtIndexPath(indexPath) as? EntityReflection
+		
+		let height = entryCell.getHeightForEntry(entry!)
+		
+		return height
+	}
 
 }
 
