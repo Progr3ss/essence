@@ -60,7 +60,9 @@ extension Divergent:UITableViewDataSource {
 	
 		
 	}
-	
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 66
+    }
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
 		ideaCounter.text = "\(toDoItems.count)"

@@ -11,8 +11,6 @@ import CoreData
 
 class Timeline: UIViewController {
 
-	
-
 	@IBOutlet weak var tableView: UITableView!
 	
 	
@@ -25,8 +23,10 @@ class Timeline: UIViewController {
         super.viewDidLoad()
 		
 	
-//		tableView.estimatedRowHeight = 174
-//		tableView.rowHeight = UITableViewAutomaticDimension
+		tableView.estimatedRowHeight = 180
+		tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.setNeedsLayout()
+//        tableView.layoutIfNeeded()
 //		table
 		fetchResultController ()
 		fetchedResultsController.delegate = self
@@ -203,8 +203,6 @@ extension Timeline: UITableViewDataSource, UITableViewDelegate{
 	
 	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 		
-		return tableView.rowHeight
-		
 		let entry = self.fetchResultController().objectAtIndexPath(indexPath) as? EntityReflection
 		
 		let height = entryCell.getHeightForEntry(entry!)
@@ -213,17 +211,3 @@ extension Timeline: UITableViewDataSource, UITableViewDelegate{
 	}
 
 }
-
-//extension TimelineCell: UITableViewDelegate{
-//
-//	func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-//		
-//	
-//		
-//		return UITableViewCellEditingStyle.Delete
-//		
-//	}
-
-
-//}
-//

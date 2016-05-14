@@ -38,39 +38,6 @@ class Reflection: UIViewController {
 		print("Idea \(question) and \(userIdeaReflection)")
 		reflectionView.becomeFirstResponder()
 	
-//		let currentDate = NSDate()
-//		let dateFormatter = NSDateFormatter()
-//	
-//		dateFormatter.locale = NSLocale.currentLocale()
-//		var convertedDate = dateFormatter.stringFromDate(currentDate)
-//		
-//		
-//		dateFormatter.dateFormat = " MMMM dd, yyyy"
-//		convertedDate = dateFormatter.stringFromDate(currentDate)
-//		print("Current date \(convertedDate)")
-
-	
-//`
-//		let currentDate = NSDate()
-//
-//		dateFormatter.locale = NSLocale.currentLocale()
-//		
-//		
-//		dateFormatter.locale = NSLocale(localeIdentifier: "el_GR")
-////		dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR")
-//		
-//		
-//		dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
-//		var converte = dateFormatter.stringFromDate(currentDate)
-//		
-//		print("nDate \(converte)")
-//		
-//		
-//		
-		
-		
-		
-		
 		
         if (toDoItems.count > 0) {
             
@@ -86,7 +53,18 @@ class Reflection: UIViewController {
             userIdeaReflection.text = self.entry.idea
 		}
 		
+	
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+		
     }
+	
+	func keyboardWillShow(sender: NSNotification) {
+		self.view.frame.origin.y -= 150
+	}
+	func keyboardWillHide(sender: NSNotification) {
+		self.view.frame.origin.y += 150
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

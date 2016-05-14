@@ -39,11 +39,19 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 		self.textViewQuotes.textAlignment = NSTextAlignment.Center
 		self.textViewQuotes.selectable = false
 		
-		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
 //		self.textViewQuotes.hidden = true
 //		self.howHowtimeLabel.hidden = true
 		
     }
+	
+	func keyboardWillShow(sender: NSNotification) {
+		self.view.frame.origin.y -= 150
+	}
+	func keyboardWillHide(sender: NSNotification) {
+		self.view.frame.origin.y += 150
+	}
 	
 	override func viewWillAppear(animated: Bool) {
 		
