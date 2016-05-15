@@ -23,7 +23,7 @@ class Convergent: UIViewController {
         super.viewDidLoad()
 
         tableView.registerClass(DivergentCell.self, forCellReuseIdentifier: "cell")
-		tableView.backgroundColor = UIColor.blueColor()
+//		tableView.backgroundColor = UIColor.blueColor()
     }
 
 }
@@ -61,7 +61,7 @@ extension Convergent: UITableViewDataSource {
 		
 		
 		cell.backgroundColor = mColorArray[indexPath.row] as? UIColor
-		cell.imageView?.image = imageWithImage(UIImage(named: "light-bulb")!, scaledToSize: CGSize(width: 30, height: 30))
+		cell.imageView?.image = imageWithImage(UIImage(named: "idea")!, scaledToSize: CGSize(width: 30, height: 30))
 //		var cellImg : UIImageView = UIImageView(frame: CGRectMake(5, 5, 30, 30))
 //		cellImg.image = UIImage(named: "light-bulb")
 //		cell.addSubview(cellImg)

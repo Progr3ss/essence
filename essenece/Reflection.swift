@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class Reflection: UIViewController {
+class Reflection: UIViewController, UITextViewDelegate {
 	
 	
 
@@ -18,6 +18,9 @@ class Reflection: UIViewController {
 	@IBOutlet weak var dateLabel: UILabel!
 	@IBOutlet weak var question: UILabel!
 	@IBOutlet weak var addImage: UIButton!
+	
+	@IBOutlet weak var tvBgView: UIView!
+	@IBOutlet weak var vTopConstraints: NSLayoutConstraint!
 	
 	var reflection : EntityReflection!
 	var entry: EntityReflection!
@@ -29,6 +32,7 @@ class Reflection: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+		self.reflectionView.delegate = self
 		question.text = userQuestion
 		
 //		userIdeaReflection.text = toDoItems[0].text
@@ -54,8 +58,8 @@ class Reflection: UIViewController {
 		}
 		
 	
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+//		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+//		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
 		
     }
 	
@@ -169,5 +173,17 @@ extension Reflection {
 	func transferToListDismiss(){
 		performSegueWithIdentifier("timelineSegue", sender: nil)
 //		self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+	}
+	
+	//MARK: TextView Delegates
+	
+	func textViewDidBeginEditing(textView: UITextView) {
+		
+		self.vTopConstraints.constant = 0
+	}
+	
+	func textViewDidEndEditing(textView: UITextView) {
+		
+		self.vTopConstraints.constant = 141
 	}
 }

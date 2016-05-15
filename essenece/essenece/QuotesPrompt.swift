@@ -39,29 +39,29 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 		self.textViewQuotes.textAlignment = NSTextAlignment.Center
 		self.textViewQuotes.selectable = false
 		
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+//		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+//		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
 //		self.textViewQuotes.hidden = true
 //		self.howHowtimeLabel.hidden = true
 		
     }
 	
-	func keyboardWillShow(sender: NSNotification) {
-		self.view.frame.origin.y -= 150
-	}
-	func keyboardWillHide(sender: NSNotification) {
-		self.view.frame.origin.y += 150
-	}
-	
-	override func viewWillAppear(animated: Bool) {
-		
-		UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: { 
-			self.textViewQuotes.hidden = false
-			self.howHowtimeLabel.hidden = false
-			
-			}, completion: nil)
-	}
-	
+//	func keyboardWillShow(sender: NSNotification) {
+//		self.view.frame.origin.y -= 150
+//	}
+//	func keyboardWillHide(sender: NSNotification) {
+//		self.view.frame.origin.y += 150
+//	}
+//	
+//	override func viewWillAppear(animated: Bool) {
+//		
+//		UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: { 
+//			self.textViewQuotes.hidden = false
+//			self.howHowtimeLabel.hidden = false
+//			
+//			}, completion: nil)
+//	}
+//	
 	
 //	navigation
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -104,7 +104,7 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 	func textFieldDidBeginEditing(textField: UITextField)  {
 		
 		
-//		self.vTfTopConstraints.constant = CGFloat (-150.0)
+		self.vTfTopConstraints.constant = CGFloat (-110.0)
 		
 		timerPicker.hidden = true
 		howHowtimeLabel.hidden = true
@@ -131,7 +131,7 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 	
 	func setupViewFrameLayout() {
 		
-//		self.vTfTopConstraints.constant = CGFloat (24.0)
+		self.vTfTopConstraints.constant = CGFloat (13.0)
 		self.view.frame = CGRectMake (self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height)
 	}
 
