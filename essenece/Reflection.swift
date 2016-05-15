@@ -33,23 +33,22 @@ class Reflection: UIViewController, UITextViewDelegate {
         
         super.viewDidLoad()
 		self.reflectionView.delegate = self
-		question.text = userQuestion
+//		question.text = userQuestion
 		
 //		userIdeaReflection.text = toDoItems[0].text
 //		userIdeaReflection.text =
 		
 		date()
-		print("Idea \(question) and \(userIdeaReflection)")
+	
 		reflectionView.becomeFirstResponder()
 	
 		
-        if (toDoItems.count > 0) {
-            
-//            print(toDoItems[0].text)
-            userIdeaReflection.text = toDoItems[0].text
-			
-			
-        }
+//        if (toDoItems.count > 0) {
+//			
+////            userIdeaReflection.text = toDoItems[0].text
+//			
+//			
+//        }
 
 		if self.entry != nil{
             
@@ -131,8 +130,9 @@ extension Reflection {
 		let entry = NSEntityDescription.insertNewObjectForEntityForName("EntityReflection", inManagedObjectContext: dataStack.managedObjectContext) as! EntityReflection
 		
 		entry.body = self.reflectionView.text
-		entry.idea = self.userIdeaReflection.text
-		entry.question = self.question.text
+//		entry.idea = self.userIdeaReflection.text
+		entry.idea = toDoItems[0].text
+		entry.question = self.userQuestion
 		entry.date = NSDate().timeIntervalSince1970
 		
 		dataStack.saveContext()
