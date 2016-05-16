@@ -19,7 +19,7 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 	
 	@IBOutlet weak var howHowtimeLabel: UILabel!
 	@IBOutlet weak var textViewQuotes: UITextView!
-	var timer = 5
+	var timer = 60
 	
 	@IBOutlet weak var vTfTopConstraints: NSLayoutConstraint!
 	
@@ -39,29 +39,29 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 		self.textViewQuotes.textAlignment = NSTextAlignment.Center
 		self.textViewQuotes.selectable = false
 		
-//		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
-//		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
-//		self.textViewQuotes.hidden = true
-//		self.howHowtimeLabel.hidden = true
 		
     }
 	
-//	func keyboardWillShow(sender: NSNotification) {
-//		self.view.frame.origin.y -= 150
-//	}
-//	func keyboardWillHide(sender: NSNotification) {
-//		self.view.frame.origin.y += 150
-//	}
-//	
-//	override func viewWillAppear(animated: Bool) {
+//	override func viewDidAppear(animated: Bool) {
+//		super.viewDidAppear(animated)
 //		
-//		UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: { 
-//			self.textViewQuotes.hidden = false
-//			self.howHowtimeLabel.hidden = false
+//		let defaults = NSUserDefaults.standardUserDefaults()
+//		let hasViewedWalkthrough = defaults.boolForKey("hasViewedWalkthrough")
+//		
+//		if hasViewedWalkthrough {
+//			return
+//		}
+//		
+//		if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("WalkthroughController") as? WalkthroughPage {
 //			
-//			}, completion: nil)
+//			presentViewController(pageViewController, animated: true, completion: nil)
+//		}
+//		
 //	}
 //	
+	
+	
+
 	
 //	navigation
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -134,6 +134,8 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 		self.vTfTopConstraints.constant = CGFloat (13.0)
 		self.view.frame = CGRectMake (self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height)
 	}
+	
+	
 
 }
 
@@ -165,9 +167,8 @@ extension QuotesPrompt : UIPickerViewDelegate , UIPickerViewDataSource{
 	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		
 		if row == 0 {
-			//change to 60 
 			
-			timer = 10
+			timer = 60
 			
 		}
 		else if (row == 1){

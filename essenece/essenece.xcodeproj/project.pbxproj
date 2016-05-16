@@ -44,6 +44,8 @@
 		91E1894D1CB3984E00174C3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E1894C1CB3984E00174C3A /* Assets.xcassets */; };
 		91E189501CB3984E00174C3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E1894E1CB3984E00174C3A /* LaunchScreen.storyboard */; };
 		91E189741CB3986E00174C3A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E189731CB3986E00174C3A /* CoreDataStack.swift */; };
+		91FC46B01CE934AF005FBC55 /* WalkthroughContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FC46AF1CE934AF005FBC55 /* WalkthroughContent.swift */; };
+		91FC46B41CE93D69005FBC55 /* WalkthroughPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FC46B31CE93D69005FBC55 /* WalkthroughPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		91E1894F1CB3984E00174C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91E189511CB3984E00174C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91E189731CB3986E00174C3A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		91FC46AF1CE934AF005FBC55 /* WalkthroughContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContent.swift; sourceTree = "<group>"; };
+		91FC46B31CE93D69005FBC55 /* WalkthroughPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 		91E189361CB3984D00174C3A = {
 			isa = PBXGroup;
 			children = (
+				91FC46B31CE93D69005FBC55 /* WalkthroughPage.swift */,
+				91FC46AF1CE934AF005FBC55 /* WalkthroughContent.swift */,
 				919BE3081CE06F5E00A4371A /* Constants.swift */,
 				919BE3041CE06ED900A4371A /* MaterailView.swift */,
 				919BE3051CE06ED900A4371A /* MateralTextField.swift */,
@@ -283,6 +289,7 @@
 				9180DAE61CB9E15900F094FF /* IdeaCell.swift in Sources */,
 				9180DADE1CB9DAA100F094FF /* ToDoItems.swift in Sources */,
 				915418CC1CB5CB7500CB64F8 /* Divergent.swift in Sources */,
+				91FC46B41CE93D69005FBC55 /* WalkthroughPage.swift in Sources */,
 				9133A1751CD716AB00913F69 /* Timer.swift in Sources */,
 				9180DAE01CB9DBAF00F094FF /* DivergentCell.swift in Sources */,
 				9180DADC1CB9DA3300F094FF /* Colors.swift in Sources */,
@@ -290,6 +297,7 @@
 				919BE3091CE06F5F00A4371A /* Constants.swift in Sources */,
 				91E1894B1CB3984E00174C3A /* essenece.xcdatamodeld in Sources */,
 				9180DAEE1CBA39FF00F094FF /* Timeline.swift in Sources */,
+				91FC46B01CE934AF005FBC55 /* WalkthroughContent.swift in Sources */,
 				919CD9521CDD85C0006E20B7 /* EntityReflection.swift in Sources */,
 				9110F5F11CBE273500D80D82 /* TimelineCell.swift in Sources */,
 				9180DAE81CB9F5EA00F094FF /* Convergent.swift in Sources */,
