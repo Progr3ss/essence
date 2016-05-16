@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import AVFoundation
 
 
 protocol TableViewCellDelegate {
@@ -21,6 +22,7 @@ class DivergentCell: UITableViewCell {
 //	@IBOutlet weak var listlabel: UILabel!
 	
 	var originalCenter = CGPoint()
+	var player: AVAudioPlayer?
 	var deleteOnDragRelease = false
 	// The object that acts as delegate for this cell.
 	var delegate: TableViewCellDelegate?
@@ -60,7 +62,7 @@ class DivergentCell: UITableViewCell {
 		
 		
 		// add a pan recognizer
-		let recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
+		let recognizer = UIPanGestureRecognizer(target: self, action: #selector(DivergentCell.handlePan(_:)))
 		recognizer.delegate = self
 		addGestureRecognizer(recognizer)
 	}
@@ -93,6 +95,7 @@ class DivergentCell: UITableViewCell {
 			if delegate != nil && toDoItem != nil {
 				// notify the delegate that this item should be deleted
 				delegate!.toDoItemDeleted(toDoItem!)
+				playSound()
 			}
 		}
 	}
@@ -106,6 +109,20 @@ class DivergentCell: UITableViewCell {
 			return false
 		}
 		return false
+	}
+	
+	func playSound() {
+		let url = NSBundle.mainBundle().URLForResource("swipe", withExtension: "wav")!
+		
+		do {
+			player = try AVAudioPlayer(contentsOfURL: url)
+			guard let player = player else { return }
+			
+			player.prepareToPlay()
+			player.play()
+		} catch let error as NSError {
+			print(error.description)
+		}
 	}
 
 }

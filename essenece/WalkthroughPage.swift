@@ -10,7 +10,7 @@ import UIKit
 
 class WalkthroughPage: UIPageViewController {
 	
-	 var pageHeadings = ["Question", "Divergent", "Convergent", "Reflection"]
+	var pageHeadings = ["Question", "Divergent", "Convergent", "Reflection"]
 	var pageImages = ["Question-page", "Divergent-page", "Convrgent-page","Reflection-page"]
 	var pageContents = ["Pin your favorite restaurants and create your own food guide",
 	                   "Search and locate your favourite restaurant on Maps",
@@ -23,6 +23,7 @@ class WalkthroughPage: UIPageViewController {
 		if let startingViewController  = viewControllerAtIndex(0)
 		{
 			setViewControllers([startingViewController], direction: .Forward, animated: true, completion: nil)
+			
 			
 		}
 
@@ -123,5 +124,11 @@ extension WalkthroughPage: UIPageViewControllerDataSource
 	
 	
 	
+	
+}
+
+
+extension WalkthroughPage: UIPageViewControllerDelegate
+{
 	
 }

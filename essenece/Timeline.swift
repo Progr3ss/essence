@@ -9,9 +9,12 @@
 import UIKit
 import CoreData
 
+
+
 class Timeline: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
+	
 	
 	
 	var coreDataStack: CoreDataStack!
@@ -21,13 +24,11 @@ class Timeline: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+		 
 	
 		tableView.estimatedRowHeight = 180
 		tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.setNeedsLayout()
-//        tableView.layoutIfNeeded()
-//		table
+
 		fetchResultController ()
 		fetchedResultsController.delegate = self
 		
@@ -56,6 +57,8 @@ class Timeline: UIViewController {
 
 
 }
+
+
 
 
 //NSFetechRequest
@@ -158,6 +161,7 @@ extension Timeline: UITableViewDataSource, UITableViewDelegate{
 		let entry = self.fetchedResultsController.objectAtIndexPath(indexPath) as? EntityReflection
 		//cell.configureCellForEntry(entry!)
 		cell.configureCellForEntry(entry!)
+		
 		
 		return cell
 	}

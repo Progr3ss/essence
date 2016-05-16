@@ -41,6 +41,8 @@ class ConfigureCellForEntry: UITableViewCell {
 		self.dateLabel.text = formatter.stringFromDate(date)
     }
 	
+	
+	
 	// Custom dynamic cell heights
 	func getHeightForEntry(entry:EntityReflection) -> CGFloat {
 		

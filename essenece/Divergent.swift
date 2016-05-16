@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AVFoundation
 class Divergent: UIViewController {
 	
 
@@ -17,7 +17,7 @@ class Divergent: UIViewController {
 	@IBOutlet weak var timeCounter: UILabel!
 	var timer = NSTimer()
 	var counter = 0
-	
+	var player: AVAudioPlayer?
 	@IBOutlet weak var userQuestionQ: UILabel!
 	@IBOutlet weak var userIdeas: UITextField!
 	@IBOutlet weak var tableView: UITableView!
@@ -45,6 +45,23 @@ class Divergent: UIViewController {
 	
 }
 
+extension Divergent {
+	
+	
+	func playSound() {
+		let url = NSBundle.mainBundle().URLForResource("drope", withExtension: "wav")!
+		
+		do {
+			player = try AVAudioPlayer(contentsOfURL: url)
+			guard let player = player else { return }
+			
+			player.prepareToPlay()
+			player.play()
+		} catch let error as NSError {
+			print(error.description)
+		}
+	}
+}
 
 
 extension Divergent:UITableViewDataSource {
@@ -100,6 +117,7 @@ extension Divergent:UITextFieldDelegate{
 			
 			tableView.insertRowsAtIndexPaths([mindexPath], withRowAnimation: UITableViewRowAnimation.Top)
 			tableView.scrollToRowAtIndexPath(mindexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: false)
+			playSound()
 			self.tableView.reloadData()
 		}
 		timerCounting()

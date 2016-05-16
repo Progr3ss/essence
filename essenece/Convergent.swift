@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AVFoundation
 class Convergent: UIViewController {
 	
 	
@@ -17,6 +17,7 @@ class Convergent: UIViewController {
 	var toDoItems = [ToDoItems]()
 	var mColorArray: NSMutableArray =  []
 	var userQuestion: String!
+	var player: AVAudioPlayer?
 	
 	
     override func viewDidLoad() {
@@ -26,6 +27,24 @@ class Convergent: UIViewController {
 //		tableView.backgroundColor = UIColor.blueColor()
     }
 
+}
+
+extension Convergent {
+	
+	
+	func playSound() {
+		let url = NSBundle.mainBundle().URLForResource("swipe", withExtension: "wav")!
+		
+		do {
+			player = try AVAudioPlayer(contentsOfURL: url)
+			guard let player = player else { return }
+			
+			player.prepareToPlay()
+			player.play()
+		} catch let error as NSError {
+			print(error.description)
+		}
+	}
 }
 extension Convergent: UITableViewDataSource {
 	

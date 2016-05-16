@@ -46,6 +46,8 @@
 		91E189741CB3986E00174C3A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E189731CB3986E00174C3A /* CoreDataStack.swift */; };
 		91FC46B01CE934AF005FBC55 /* WalkthroughContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FC46AF1CE934AF005FBC55 /* WalkthroughContent.swift */; };
 		91FC46B41CE93D69005FBC55 /* WalkthroughPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FC46B31CE93D69005FBC55 /* WalkthroughPage.swift */; };
+		91FC46B71CE9833E005FBC55 /* drope.wav in Resources */ = {isa = PBXBuildFile; fileRef = 91FC46B51CE9833E005FBC55 /* drope.wav */; };
+		91FC46B81CE9833E005FBC55 /* swipe.wav in Resources */ = {isa = PBXBuildFile; fileRef = 91FC46B61CE9833E005FBC55 /* swipe.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		91E189731CB3986E00174C3A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		91FC46AF1CE934AF005FBC55 /* WalkthroughContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContent.swift; sourceTree = "<group>"; };
 		91FC46B31CE93D69005FBC55 /* WalkthroughPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPage.swift; sourceTree = "<group>"; };
+		91FC46B51CE9833E005FBC55 /* drope.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = drope.wav; path = sound/drope.wav; sourceTree = "<group>"; };
+		91FC46B61CE9833E005FBC55 /* swipe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = swipe.wav; path = sound/swipe.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,8 @@
 				9180DADF1CB9DBAF00F094FF /* DivergentCell.swift */,
 				9180DADB1CB9DA3300F094FF /* Colors.swift */,
 				915418CB1CB5CB7500CB64F8 /* Divergent.swift */,
+				91FC46B51CE9833E005FBC55 /* drope.wav */,
+				91FC46B61CE9833E005FBC55 /* swipe.wav */,
 				91E189411CB3984E00174C3A /* essenece */,
 				91E189401CB3984D00174C3A /* Products */,
 			);
@@ -257,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9102CB411CE8504000C47600 /* Roboto-Bold.ttf in Resources */,
+				91FC46B81CE9833E005FBC55 /* swipe.wav in Resources */,
 				9102CB451CE8504000C47600 /* Roboto-LightItalic.ttf in Resources */,
 				9102CB471CE8504000C47600 /* Roboto-MediumItalic.ttf in Resources */,
 				9102CB431CE8504000C47600 /* Roboto-Italic.ttf in Resources */,
@@ -272,6 +279,7 @@
 				9102CB3F1CE8504000C47600 /* Roboto-Black.ttf in Resources */,
 				91E1894D1CB3984E00174C3A /* Assets.xcassets in Resources */,
 				91E189481CB3984E00174C3A /* Main.storyboard in Resources */,
+				91FC46B71CE9833E005FBC55 /* drope.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
