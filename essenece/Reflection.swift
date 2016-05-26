@@ -33,22 +33,13 @@ class Reflection: UIViewController, UITextViewDelegate {
         
         super.viewDidLoad()
 		self.reflectionView.delegate = self
-//		question.text = userQuestion
-		
-//		userIdeaReflection.text = toDoItems[0].text
-//		userIdeaReflection.text =
+
 		
 		date()
 	
 		reflectionView.becomeFirstResponder()
 	
 		
-//        if (toDoItems.count > 0) {
-//			
-////            userIdeaReflection.text = toDoItems[0].text
-//			
-//			
-//        }
 
 		if self.entry != nil{
             
@@ -57,9 +48,7 @@ class Reflection: UIViewController, UITextViewDelegate {
 		}
 		
 	
-//		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
-//		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(QuotesPrompt.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
-		
+
     }
 	
 	func keyboardWillShow(sender: NSNotification) {
@@ -79,19 +68,6 @@ class Reflection: UIViewController, UITextViewDelegate {
 extension Reflection {
 	
 	func date() {
-		// Day of the week, month, year format
-//		let formatter = NSDateFormatter()
-//		formatter.dateFormat = "MMMM dd yyyy"
-//		
-//		// Create the new date object
-//		let date = NSDate(timeIntervalSince1970: entry.date)
-//		// Day of the week, month, year format
-////		let formatter = NSDateFormatter()
-////		formatter.dateFormat = "MMMM dd, yyyy"
-////		
-////		// Create the new date object
-////		let date = NSDate(timeIntervalSince1970: entry.date)
-//		self.dateLabel.text = formatter.stringFromDate(date)
 
 		
 		let currentDate = NSDate()
@@ -107,30 +83,13 @@ extension Reflection {
 		self.dateLabel.text = convertedDate
 
 	}
-//	func date()  {
-//		// Do any additional setup after loading the view.
-//		if self.entry != nil {
-//			self.textView.text = self.entry?.body
-//			self.pickedMood = Mood(rawValue: self.entry!.mood)
-//			date = NSDate(timeIntervalSince1970: self.entry!.date)
-//		} else {
-//			self.pickedMood = Mood.THDiaryMoodGood
-//			date = NSDate()
-//			self.setLocation()
-//		}
-//		
-//		let df = NSDateFormatter()
-//		df.dateFormat = "EEEE, MMMM d, yyyy"
-//		
-//		
-//	}
+
 	
 	func insertDiaryEntry(){
 		
 		let entry = NSEntityDescription.insertNewObjectForEntityForName("EntityReflection", inManagedObjectContext: dataStack.managedObjectContext) as! EntityReflection
 		
 		entry.body = self.reflectionView.text
-//		entry.idea = self.userIdeaReflection.text
 		entry.idea = toDoItems[0].text
 		entry.question = self.userQuestion
 		entry.date = NSDate().timeIntervalSince1970
@@ -143,10 +102,7 @@ extension Reflection {
 		self.entry.body = self.reflectionView.text
 		
 		
-//		self.entry.body = self.
-//		self.entry?.body = self.textView.text
-//		self.entry?.imageData = UIImagePNGRepresentation(getPickedImage())!
-//		self.entry?.mood = pickedMood!.rawValue
+
 		let dataStack = CoreDataStack.sharedInstance
 		
 		dataStack.saveContext()
@@ -172,7 +128,6 @@ extension Reflection {
 	
 	func transferToListDismiss(){
 		performSegueWithIdentifier("timelineSegue", sender: nil)
-//		self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
 	}
 	
 	//MARK: TextView Delegates

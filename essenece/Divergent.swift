@@ -149,8 +149,6 @@ extension Divergent {
 	
 	func timeAction(){
 		counter -= 1
-//		timeCounter.text = "\(counter)"
-//		print("counting \(counter)")
 		timeCounter.text = "\(counter)"
 		
 		if counter == 0 {

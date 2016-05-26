@@ -11,10 +11,13 @@ import UIKit
 class WalkthroughPage: UIPageViewController {
 	
 	var pageHeadings = ["Question", "Divergent", "Convergent", "Reflection"]
-	var pageImages = ["Question-page", "Divergent-page", "Convrgent-page","Reflection-page"]
-	var pageContents = ["Pin your favorite restaurants and create your own food guide",
-	                   "Search and locate your favourite restaurant on Maps",
-	                   "Find restaurants pinned by your friends and other foodies around the world","martin test"]
+	var pageImages =   ["Question-page", "Divergent-page", "Convrgent-page","Reflection-page"]
+	var pageContents = ["Ask great questions to get great answers",
+	                   "Divergent allows you to create  different answers in a limited time.which enables you to be more creative.",
+	                   "Convergent enables you to filter out the answers that are not reasonable. Choose only one answer.",
+	                   
+	                   "Reflect on the answers and questions. "]
+	
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +39,6 @@ class WalkthroughPage: UIPageViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -81,23 +75,7 @@ extension WalkthroughPage: UIPageViewControllerDataSource
 	}
 	
 	
-//	func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-//		
-//		return pageHeadings.count
-//	}
-//	
-//	func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-//		
-//		if let pageContentViewController = storyboard?.instantiateViewControllerWithIdentifier("WalkthroughContent") as? WalkthroughContent {
-//			
-//			return pageContentViewController.index
-//			
-//		}
-//		
-//		return 0
-//
-//	}
-	
+
 	
 	func viewControllerAtIndex(index: Int) -> WalkthroughContent?
 	{

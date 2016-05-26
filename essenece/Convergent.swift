@@ -74,16 +74,9 @@ extension Convergent: UITableViewDataSource {
 		let item = toDoItems[indexPath.row]
 		cell.textLabel?.text = item.text
 		cell.textLabel?.numberOfLines = 0
-//		
-//		cell.imageView?.image = UIImage(named: "light-bulb")
-//		cell.imageView?.contentMode = .ScaleAspectFit
-		
-		
+
 		cell.backgroundColor = mColorArray[indexPath.row] as? UIColor
 		cell.imageView?.image = imageWithImage(UIImage(named: "idea")!, scaledToSize: CGSize(width: 30, height: 30))
-//		var cellImg : UIImageView = UIImageView(frame: CGRectMake(5, 5, 30, 30))
-//		cellImg.image = UIImage(named: "light-bulb")
-//		cell.addSubview(cellImg)
 		cell.imageView?.contentMode = .ScaleAspectFit
 	
 		cell.delegate = self

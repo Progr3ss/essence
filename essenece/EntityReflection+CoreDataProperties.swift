@@ -30,19 +30,5 @@ extension EntityReflection {
 	}
 
 	
-//	func sectionName() -> String {
-////		let currentDate = NSDate()
-////		let dateFormatter = NSDateFormatter()
-////		
-////		dateFormatter.locale = NSLocale.currentLocale()
-////		var convertedDate = dateFormatter.stringFromDate(currentDate)
-////		
-////		
-//////		dateFormatter.dateFormat = "MMMM, yyyy"
-////		convertedDate = dateFormatter.stringFromDate(currentDate)
-////		
-////		
-////		return convertedDate
-//		
-//	}
+
 }
