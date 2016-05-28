@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3AB41978A791691581A8D8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1136AD3723620BBD9E00D03 /* libPods.a */; };
 		9102CB3E1CE8504000C47600 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9102CB311CE8504000C47600 /* LICENSE.txt */; };
 		9102CB3F1CE8504000C47600 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9102CB321CE8504000C47600 /* Roboto-Black.ttf */; };
 		9102CB401CE8504000C47600 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9102CB331CE8504000C47600 /* Roboto-BlackItalic.ttf */; };
@@ -94,6 +95,9 @@
 		91FC46B31CE93D69005FBC55 /* WalkthroughPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPage.swift; sourceTree = "<group>"; };
 		91FC46B51CE9833E005FBC55 /* drope.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = drope.wav; path = sound/drope.wav; sourceTree = "<group>"; };
 		91FC46B61CE9833E005FBC55 /* swipe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = swipe.wav; path = sound/swipe.wav; sourceTree = "<group>"; };
+		9FE44DC147579F5A46ABBC21 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D4B3FFFA2F818BA99B3FC5A1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F1136AD3723620BBD9E00D03 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +105,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3AB41978A791691581A8D8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E4EE075294FB3FF32FFCF91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FE44DC147579F5A46ABBC21 /* Pods.debug.xcconfig */,
+				D4B3FFFA2F818BA99B3FC5A1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9102CB4C1CE8507500C47600 /* Roboto */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +192,8 @@
 				91FC46B61CE9833E005FBC55 /* swipe.wav */,
 				91E189411CB3984E00174C3A /* essenece */,
 				91E189401CB3984D00174C3A /* Products */,
+				2E4EE075294FB3FF32FFCF91 /* Pods */,
+				D380174FF56F5ADFF03EE58D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,6 +220,14 @@
 			path = essenece;
 			sourceTree = "<group>";
 		};
+		D380174FF56F5ADFF03EE58D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1136AD3723620BBD9E00D03 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91E1896A1CB3984E00174C3A /* Build configuration list for PBXNativeTarget "essenece" */;
 			buildPhases = (
+				2F421824259746FCFA666C15 /* Check Pods Manifest.lock */,
 				91E1893B1CB3984D00174C3A /* Sources */,
 				91E1893C1CB3984D00174C3A /* Frameworks */,
 				91E1893D1CB3984D00174C3A /* Resources */,
+				F2F96E5A22FCECB27C4A431A /* Embed Pods Frameworks */,
+				E993B1ED6DA03844C55D436F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +311,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F421824259746FCFA666C15 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E993B1ED6DA03844C55D436F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2F96E5A22FCECB27C4A431A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91E1893B1CB3984D00174C3A /* Sources */ = {
@@ -427,6 +502,7 @@
 		};
 		91E1896B1CB3984E00174C3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FE44DC147579F5A46ABBC21 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = essenece/Info.plist;
@@ -440,6 +516,7 @@
 		};
 		91E1896C1CB3984E00174C3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4B3FFFA2F818BA99B3FC5A1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = essenece/Info.plist;

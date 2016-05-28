@@ -8,20 +8,32 @@
 
 import UIKit
 import AVFoundation
+import GoogleMobileAds
+
 class Convergent: UIViewController {
 	
 	
 
 	@IBOutlet weak var tableView: UITableView!
 	
+
 	var toDoItems = [ToDoItems]()
 	var mColorArray: NSMutableArray =  []
 	var userQuestion: String!
 	var player: AVAudioPlayer?
 	
+	@IBOutlet weak var bannerView: GADBannerView!
+	@IBOutlet weak var bannerViewBottonConstraints: NSLayoutConstraint!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		//banner
+		
+		bannerView.adUnitID = "ca-app-pub-6538315736638726/7095363697"
+//		bannerView.delegate = self
+		bannerView.rootViewController = self
+		bannerView.loadRequest(GADRequest())
+		
 
         tableView.registerClass(DivergentCell.self, forCellReuseIdentifier: "cell")
 //		tableView.backgroundColor = UIColor.blueColor()
@@ -129,4 +141,37 @@ extension Convergent: TableViewCellDelegate {
 	
 }
 
+//extension Convergent : GADBannerViewDelegate{
+//	func adView(bannerView: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
+//		
+//		if bannerViewBottonConstraints.constant == 0{
+//			UIView.animateWithDuration(0.25, animations: { 
+//				self.bannerViewBottonConstraints.constant = -CGRectGetHeight(self.bannerView.bounds)
+//				
+//				
+//				self.view.layoutIfNeeded()
+//				
+//				}, completion: nil)
+//		}
+//		
+//	}
+//	
+//	func adViewDidReceiveAd(bannerView: GADBannerView!) {
+//		
+//		if bannerViewBottonConstraints.constant != 0{
+//			UIView.animateWithDuration(0.25, animations: {
+//				self.bannerViewBottonConstraints.constant = 0
+//				
+//				self.bannerViewBottonConstraints.constant = 0
+//				self.view.layoutIfNeeded()
+//				
+//	
+//				
+//				}, completion: nil)
+//		}
+//		
+//	}
+//	
+//}
+//
 
