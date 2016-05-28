@@ -41,24 +41,24 @@ class QuotesPrompt: UIViewController, UITextFieldDelegate {
 		
 		
     }
-	
-	override func viewDidAppear(animated: Bool) {
-		super.viewDidAppear(animated)
-		
-		let defaults = NSUserDefaults.standardUserDefaults()
-		let hasViewedWalkthrough = defaults.boolForKey("hasViewedWalkthrough")
-		
-		if hasViewedWalkthrough {
-			return
-		}
-		
-		if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("WalkthroughController") as? WalkthroughPage{
-			
-			presentViewController(pageViewController, animated: true, completion: nil)
-		}
-		
-	}
-	
+//	
+//	override func viewDidAppear(animated: Bool) {
+//		super.viewDidAppear(animated)
+//		
+//		let defaults = NSUserDefaults.standardUserDefaults()
+//		let hasViewedWalkthrough = defaults.boolForKey("hasViewedWalkthrough")
+//		
+//		if hasViewedWalkthrough {
+//			return
+//		}
+//		
+//		if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("WalkthroughController") as? WalkthroughPage{
+//			
+//			presentViewController(pageViewController, animated: true, completion: nil)
+//		}
+//		
+//	}
+//	
 	
 
 	

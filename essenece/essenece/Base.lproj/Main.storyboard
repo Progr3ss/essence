@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GDs-mH-9kF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hbp-Rn-zJ4">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -501,7 +501,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3D02AA70-4A67-4F98-9B03-F3CA08D11658" translatesAutoresizingMaskIntoConstraints="NO" id="S9L-Ib-psz">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0A690EDA-91DC-40AD-A074-0D66FEB3D88A" translatesAutoresizingMaskIntoConstraints="NO" id="S9L-Ib-psz">
                                 <rect key="frame" x="7" y="98" width="60" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="yl3-ws-GRm"/>
@@ -517,7 +517,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5D73B367-EFA6-4AF7-A9F3-2B383663588B" translatesAutoresizingMaskIntoConstraints="NO" id="xK0-M8-0gK">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B641732B-A7F2-4E16-9C28-0DFCC311556C" translatesAutoresizingMaskIntoConstraints="NO" id="xK0-M8-0gK">
                                 <rect key="frame" x="7" y="145" width="60" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="IM4-dx-wIf"/>
@@ -759,7 +759,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3D02AA70-4A67-4F98-9B03-F3CA08D11658" width="144" height="144">
+        <image name="0A690EDA-91DC-40AD-A074-0D66FEB3D88A" width="144" height="144">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
 GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
@@ -775,7 +775,7 @@ AZkBoAGoAbUBugG8Ab4BwwHLAc4B0wHbAd4B8AHzAfgAAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAA
 AAAB+g
 </mutableData>
         </image>
-        <image name="5D73B367-EFA6-4AF7-A9F3-2B383663588B" width="246" height="246">
+        <image name="B641732B-A7F2-4E16-9C28-0DFCC311556C" width="246" height="246">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
 GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz

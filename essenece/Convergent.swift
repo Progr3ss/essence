@@ -27,16 +27,13 @@ class Convergent: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		//banner
-		
+
 		bannerView.adUnitID = "ca-app-pub-6538315736638726/7095363697"
-//		bannerView.delegate = self
 		bannerView.rootViewController = self
 		bannerView.loadRequest(GADRequest())
 		
 
         tableView.registerClass(DivergentCell.self, forCellReuseIdentifier: "cell")
-//		tableView.backgroundColor = UIColor.blueColor()
     }
 
 }
